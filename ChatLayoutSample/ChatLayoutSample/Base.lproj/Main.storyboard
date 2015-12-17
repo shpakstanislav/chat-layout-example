@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BKd-CZ-IkU">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="533"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ucM-3T-gOy">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="7ce-xl-Ax6"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="8JC-D4-ukk"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUx-UX-IcJ">
+                                <rect key="frame" x="0.0" y="533" width="320" height="35"/>
+                                <color key="backgroundColor" red="0.89411764709999997" green="0.90588235289999997" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="CYp-4O-FPR"/>
+                                </constraints>
+                                <state key="normal" title="Add Message">
+                                    <color key="titleColor" red="0.32156862749999998" green="0.47843137250000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L7P-7k-hVU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BKd-CZ-IkU" secondAttribute="trailing" id="7cs-OW-aZB"/>
+                            <constraint firstItem="BKd-CZ-IkU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="9Vl-na-y8o"/>
+                            <constraint firstItem="QUx-UX-IcJ" firstAttribute="top" secondItem="BKd-CZ-IkU" secondAttribute="bottom" id="RAi-2f-mxp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BKd-CZ-IkU" secondAttribute="bottom" constant="35" id="SiK-ZR-Ibl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QUx-UX-IcJ" secondAttribute="bottom" id="TRG-D4-dTH"/>
+                            <constraint firstAttribute="trailing" secondItem="QUx-UX-IcJ" secondAttribute="trailing" id="XoK-X6-tfz"/>
+                            <constraint firstItem="QUx-UX-IcJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lGk-ht-dmj"/>
+                            <constraint firstItem="BKd-CZ-IkU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vXj-1K-qmg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="SiK-ZR-Ibl"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="addMessageButton" destination="QUx-UX-IcJ" id="3b5-1u-Md5"/>
+                        <outlet property="collectionView" destination="BKd-CZ-IkU" id="JeD-SY-XBd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="375" y="307"/>
+        </scene>
+    </scenes>
+</document>
